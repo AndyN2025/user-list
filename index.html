@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Управление пользователями</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="header__title">Управление пользователями</h1>
+            <p class="header__subtitle">Фильтрация, сортировка и управление фотографиями</p>
+        </header>
+
+        <section class="controls">
+            <div class="controls__group">
+                <div class="control-item">
+                    <label class="control-item__label" for="age-filter">Фильтр по возрасту:</label>
+                    <input class="control-item__input" type="number" id="age-filter" min="0" max="110" placeholder="Мин. возраст">
+                </div>
+                
+                <div class="control-item">
+                    <label class="control-item__label" for="sort-select">Сортировка:</label>
+                    <select class="control-item__select" id="sort-select">
+                        <option value="">Без сортировки</option>
+                        <option value="name">По имени</option>
+                        <option value="age">По возрасту</option>
+                    </select>
+                </div>
+                
+                <div class="control-item">
+                    <label class="control-item__label" for="view-mode">Вид отображения:</label>
+                    <select class="control-item__select" id="view-mode">
+                        <option value="cards">Карточки</option>
+                        <option value="table">Таблица</option>
+                    </select>
+                </div>
+                
+                <div class="control-item button"> 
+                    <button class="controls__apply-btn" id="apply-filters">Применить фильтры</button>
+                </div>
+                
+            </div>
+        </section>
+
+        <main class="main">
+            <div class="users-container" id="users-container">
+                <!-- Пользователи здесь -->
+            </div>
+            
+            <div class="pagination" id="pagination">
+                <!-- Пагинация здесь -->
+            </div>
+        </main>
+    </div>
+
+    <input type="file" id="file-input" class="hidden" accept="image/*" aria-hidden="true">
+    <script src="script.js"></script>
+</body>
+</html>
