@@ -155,8 +155,9 @@ function createUserRow(user) {
     row.innerHTML = `
         <td class="user-table__avatar">
             <img src="${user.avatar || getPlaceholderAvatar(60, 60, 'Нет фото')}" 
-                alt="Фото ${user.firstName} ${user.lastName}" 
-                style="width: 100%; height: 100%; object-fit: cover;">
+                alt="Фото ${user.firstName} ${user.lastName}"
+                data-user-id="${user.id}"
+                class="user-avatar" >
         </td>
         <td>${user.firstName} ${user.lastName}</td>
         <td>${user.age}</td>
